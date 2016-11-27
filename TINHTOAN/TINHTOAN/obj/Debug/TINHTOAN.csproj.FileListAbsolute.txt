@@ -1,0 +1,9 @@
+D:\LamC#\TINHTOAN\TINHTOAN\bin\Debug\TINHTOAN.exe.config
+D:\LamC#\TINHTOAN\TINHTOAN\obj\Debug\TINHTOAN.csprojResolveAssemblyReference.cache
+D:\LamC#\TINHTOAN\TINHTOAN\obj\Debug\TINHTOAN.Form1.resources
+D:\LamC#\TINHTOAN\TINHTOAN\obj\Debug\TINHTOAN.Properties.Resources.resources
+D:\LamC#\TINHTOAN\TINHTOAN\obj\Debug\TINHTOAN.csproj.GenerateResource.Cache
+D:\LamC#\TINHTOAN\TINHTOAN\bin\Debug\TINHTOAN.exe
+D:\LamC#\TINHTOAN\TINHTOAN\bin\Debug\TINHTOAN.pdb
+D:\LamC#\TINHTOAN\TINHTOAN\obj\Debug\TINHTOAN.exe
+D:\LamC#\TINHTOAN\TINHTOAN\obj\Debug\TINHTOAN.pdb
