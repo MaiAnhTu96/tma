@@ -12,12 +12,27 @@ namespace TINHTOAN
 {
     public partial class Form1 : Form
     {
+        private void textBox1_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void textBox2_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
         public Form1()
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btCong_Click(object sender, EventArgs e)
         {
             string t;
             t = Convert.ToString(textBox1.Text);
@@ -33,46 +48,53 @@ namespace TINHTOAN
                 textBox3.Text = sum.ToString();
                 btnC.Enabled = false;
             }          
-         }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            DialogResult h= MessageBox.Show("BAN MUON THOAT HAY KHONG", "THOAT", MessageBoxButtons.YesNo);
-            if (h==DialogResult.Yes)
-                this.Close();
-            else
-                this.textBox1.Focus();
         }
-        //THAO TAC TINH TOAN
-        private void button2_Click(object sender, EventArgs e)
+      
+        private void btTru_Click(object sender, EventArgs e)
         {
             int tru;
             tru = int.Parse(textBox1.Text) - int.Parse(textBox2.Text);
             textBox3.Text = tru.ToString();
+
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btNhan_Click(object sender, EventArgs e)
         {
             int nhan;
             nhan = int.Parse(textBox1.Text) * int.Parse(textBox2.Text);
             textBox3.Text = nhan.ToString();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btChia_Click(object sender, EventArgs e)
         {
             float chia;
             chia = float.Parse(textBox1.Text) / float.Parse(textBox2.Text);
             textBox3.Text = chia.ToString();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btXoa_Click(object sender, EventArgs e)
         {
             textBox1.Text = null;
             textBox2.Text = null;
             textBox3.Text = null;
             btnC.Enabled = true;
         }
-
-       
+        private void btOut_Click(object sender, EventArgs e)
+        {
+            DialogResult h = MessageBox.Show("BAN MUON THOAT HAY KHONG", "THOAT", MessageBoxButtons.YesNo);
+            if (h == DialogResult.Yes)
+                this.Close();
+            else
+                this.textBox1.Focus();
+        }
+        //Nhapnhayloi khinhap sai
+        /*private void textBox1_TextChanged(object sender, EventArgs e)
+        {   
+            Control control = (Control)sender;
+            if(!Char.IsDigit(control.Text[control.Text.Length - 1]))
+                this.errorProvider1.SetError(control, "this is not a valid number");
+            else
+                this.errorProvider1.Clear();
+        }*/
     }
 }
